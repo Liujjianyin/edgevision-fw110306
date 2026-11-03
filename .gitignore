@@ -1,0 +1,28 @@
+# Efinity generated build products
+FPGA/src/outflow/
+FPGA/src/work_syn/
+FPGA/src/work_pnr/
+*.vdb
+*.vvp
+*.vcd
+*.fst
+
+# Local Python environments and caches
+.venv/
+__pycache__/
+*.pyc
+
+# Private training data and generated dataset files
+Model/data/images/
+Model/data/labels/
+Model/data/background/
+Model/data/supplementary/
+Model/data/*.csv
+Model/data/dataset*.yaml
+
+# Local IDE and OS files
+.vscode/
+.idea/
+*.user
+.DS_Store
+Thumbs.db

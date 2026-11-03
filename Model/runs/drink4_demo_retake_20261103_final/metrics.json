@@ -1,0 +1,368 @@
+{
+  "model": "Tiny32 3->8->16->24 INT8 CNN: four beverages plus explicit background",
+  "run": "drink4_demo_retake_20261103",
+  "selected_epoch": 487,
+  "optimization_images": 377,
+  "internal_selection_images": 50,
+  "final_test_images": 111,
+  "retake_test_images": 15,
+  "retake_test_per_class": [
+    3,
+    3,
+    4,
+    5
+  ],
+  "excluded_water_c_images": 108,
+  "baseline_retake_int8": {
+    "correct": 15,
+    "total": 15,
+    "accuracy": 1.0,
+    "confusion_rows_true_columns_pred": [
+      [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "candidate_retake_float": {
+    "correct": 15,
+    "total": 15,
+    "accuracy": 1.0,
+    "confusion_rows_true_columns_pred": [
+      [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "candidate_retake_int8": {
+    "correct": 15,
+    "total": 15,
+    "accuracy": 1.0,
+    "confusion_rows_true_columns_pred": [
+      [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "baseline_all_final_int8": {
+    "correct": 108,
+    "total": 111,
+    "accuracy": 0.972972972972973,
+    "confusion_rows_true_columns_pred": [
+      [
+        19,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        31,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        29,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        28,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "candidate_all_final_float": {
+    "correct": 106,
+    "total": 111,
+    "accuracy": 0.954954954954955,
+    "confusion_rows_true_columns_pred": [
+      [
+        18,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        30,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        29,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        28,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "candidate_all_final_int8": {
+    "correct": 106,
+    "total": 111,
+    "accuracy": 0.954954954954955,
+    "confusion_rows_true_columns_pred": [
+      [
+        18,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        30,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        29,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        28,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "confusion_rows_true_columns_pred": [
+    [
+      18,
+      3,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      30,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      29,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      28,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "int8_vs_float_disagreements": 0,
+  "weights_bytes": 4944,
+  "bias_bytes": 212,
+  "layers": [
+    {
+      "layer": 0,
+      "shift": 7,
+      "weight_offset": 0,
+      "bias_offset": 0,
+      "weight_shape": [
+        8,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "layer": 1,
+      "shift": 6,
+      "weight_offset": 216,
+      "bias_offset": 8,
+      "weight_shape": [
+        16,
+        8,
+        3,
+        3
+      ]
+    },
+    {
+      "layer": 2,
+      "shift": 5,
+      "weight_offset": 1368,
+      "bias_offset": 24,
+      "weight_shape": [
+        24,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "layer": 3,
+      "shift": 0,
+      "weight_quantization_shift": 4,
+      "weight_offset": 4824,
+      "bias_offset": 48,
+      "weight_shape": [
+        5,
+        24
+      ]
+    }
+  ],
+  "retake_source_counts": [
+    12,
+    12,
+    14,
+    21
+  ],
+  "limitations": [
+    "The 15 retake test images are a small chronological suffix of the supplied capture sequences; adjacent video-like frames may correlate.",
+    "Scene-level component box remains reference-background subtraction, not CNN localization.",
+    "Successful offline evaluation does not prove the model is deployed or accurate on the FPGA camera."
+  ]
+}

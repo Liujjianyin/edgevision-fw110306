@@ -1,0 +1,123 @@
+{
+  "model": "Tiny32 3->8->16->24 INT8 CNN: 4 beverages + explicit background (5 outputs)",
+  "classes": [
+    "乌苏啤酒",
+    "小可口可乐",
+    "小青柠",
+    "百事可乐",
+    "背景"
+  ],
+  "background_id": 4,
+  "unknown_id": 5,
+  "selected_epoch": 568,
+  "optimization_images": 342,
+  "internal_selection_images": 41,
+  "heldout_images": 96,
+  "excluded_water_c_images": 108,
+  "beverage_counts_total": [
+    90,
+    148,
+    121,
+    114
+  ],
+  "float_classification_accuracy": 0.96875,
+  "int8_classification_accuracy": 0.96875,
+  "int8_beverage_correct": 92,
+  "heldout_beverage_images": 95,
+  "int8_background_correct": 1,
+  "heldout_background_images": 1,
+  "confusion_rows_true_columns_pred": [
+    [
+      16,
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      28,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      25,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      23,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "weights_bytes": 4944,
+  "bias_bytes": 212,
+  "layers": [
+    {
+      "layer": 0,
+      "shift": 7,
+      "weight_offset": 0,
+      "bias_offset": 0,
+      "weight_shape": [
+        8,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "layer": 1,
+      "shift": 6,
+      "weight_offset": 216,
+      "bias_offset": 8,
+      "weight_shape": [
+        16,
+        8,
+        3,
+        3
+      ]
+    },
+    {
+      "layer": 2,
+      "shift": 5,
+      "weight_offset": 1368,
+      "bias_offset": 24,
+      "weight_shape": [
+        24,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "layer": 3,
+      "shift": 0,
+      "weight_quantization_shift": 4,
+      "weight_offset": 4824,
+      "bias_offset": 48,
+      "weight_shape": [
+        5,
+        24
+      ]
+    }
+  ],
+  "limitations": [
+    "Fixed camera, one beverage, cloth background only; box is reference-background subtraction, not CNN detection.",
+    "Beverage validation shares capture sessions; the single background validation image shares a near-duplicate scene with training. Not a field accuracy estimate.",
+    "Removed water-C is excluded from all training and validation; it is not guaranteed to be rejected as an unknown object.",
+    "Actual FPGA camera, framing, background calibration and each remaining beverage need independent physical verification."
+  ]
+}

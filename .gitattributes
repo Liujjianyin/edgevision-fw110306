@@ -1,0 +1,21 @@
+# Firmware and binary artifacts must never be line-ending converted.
+# Git on this machine has core.autocrlf=true, which would otherwise rewrite
+# .bit/.hex payloads on checkout and corrupt the programmed image.
+*.bit   -text
+*.hex   -text
+*.bin   -text
+*.mem   -text
+*.dcf   -text
+*.rbf   -text
+*.exe   -text
+*.dll   -text
+*.zip   -text
+*.png   -text
+*.jpg   -text
+*.pdf   -text
+*.docx  -text
+
+# Source files keep normal text handling.
+*.v     text
+*.sv    text
+*.vh    text

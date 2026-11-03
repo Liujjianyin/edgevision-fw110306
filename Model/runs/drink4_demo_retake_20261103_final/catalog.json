@@ -1,0 +1,38 @@
+{
+  "beverage_classes": 4,
+  "background_id": 4,
+  "unknown_id": 5,
+  "classes": [
+    {
+      "id": 0,
+      "name": "乌苏啤酒",
+      "price_cny": 8.0,
+      "show_osd": true
+    },
+    {
+      "id": 1,
+      "name": "小可口可乐",
+      "price_cny": 2.5,
+      "show_osd": true
+    },
+    {
+      "id": 2,
+      "name": "小青柠",
+      "price_cny": 5.0,
+      "show_osd": true
+    },
+    {
+      "id": 3,
+      "name": "百事可乐",
+      "price_cny": 3.0,
+      "show_osd": true
+    },
+    {
+      "id": 4,
+      "name": "背景",
+      "price_cny": null,
+      "show_osd": false
+    }
+  ],
+  "note": "Candidate weights only; active firmware is unchanged."
+}

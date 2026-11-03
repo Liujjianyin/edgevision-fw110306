@@ -1,0 +1,11 @@
+{
+  "repository": "edgevision-fw110306",
+  "firmware": "FW110306",
+  "files": 206,
+  "bytes": 12792800,
+  "mb_decimal": 12.7928,
+  "absolute_path_scan": "PASS",
+  "private_data_included": false,
+  "history_included": false,
+  "fpga_source_copied_without_changes": true
+}
